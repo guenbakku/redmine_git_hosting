@@ -5,7 +5,7 @@
       - if User.current.git_allowed_to?(:edit_repository_git_notifications, @repository)
         .contextual
           = link_to l(:label_git_notifications_edit), edit_repository_git_notifications_path(@repository), class: 'icon icon-edit modal-box'
-          = link_to l(:label_git_notifications_delete), repository_git_notifications_path(@repository), remote: true, method: :delete, confirm: l(:text_are_you_sure), class: 'icon icon-del'
+          = link_to l(:label_git_notifications_delete), repository_git_notifications_path(@repository), remote: true, method: :delete, confirm: l(:text_are_you_sure), data: {confirm: l(:text_are_you_sure)}, class: 'icon icon-del'
     - else
       - if User.current.git_allowed_to?(:create_repository_git_notifications, @repository)
         .contextual= link_to l(:label_git_notifications_add), new_repository_git_notifications_path(@repository), class: 'icon icon-add modal-box'
