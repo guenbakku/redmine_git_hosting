@@ -4,7 +4,7 @@
                       :url  => {:controller => 'gitolite_public_keys', :action => 'create', :user_id => params[:id], :tab => params[:id]&&'keys'},
                       :html => {:method => :post} do |f| %>
 
-  <p><%= f.text_field :title, :label => :label_identifier_can_be_arbitrary, :required => true, :style => 'width: 97%;' %></p>
+  <p><%= f.text_field :title, :label => :label_identifier_can_be_arbitrary, :required => true%></p>
 
   <% if can_create_deployment_keys_for_some_project(@user) %>
     <p>
@@ -14,8 +14,7 @@
                                   [ l(:label_deploy_key), 1 ]
                                 ],
                               ),
-                              { :required => true, :label => :label_key_type },
-                              { :class    => 'select_key_type' } %>
+                              { :required => true, :label => :label_key_type } %>
 
 
     </p>
@@ -29,7 +28,7 @@
 
   <p>
     <%= f.text_area :key, :label => :label_public_key, :required => true,
-          :style => "width: 97%; height: 200px; overflow: auto;",
+          :style => "height: 100px;",
           :cols => nil,
           :rows => nil %>
   </p>

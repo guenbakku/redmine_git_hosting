@@ -1,25 +1,19 @@
 <%= stylesheet_link_tag 'application', :plugin => 'redmine_git_hosting' %>
 
-  <h3><%= l(:label_my_public_keys) %></h3>
-
-  <fieldset class="public_key_view">
-    <legend><%= l(:label_current_user_keys) %></legend>
+  <h3><%= l(:label_current_user_keys) %></h3>
+  <div class="autoscroll">
     <%= render :partial => 'gitolite_public_keys/ssh_keys', :locals => {:ssh_keys => @gitolite_user_keys} %>
-  </fieldset>
+  </div>
 
-  <br/>
-
-  <fieldset class="public_key_view">
-    <legend><%= l(:label_current_deploy_keys) %></legend>
+  <h3><%= l(:label_current_deploy_keys) %></h3>
+  <div class="autoscroll">
     <%= render :partial => 'gitolite_public_keys/ssh_keys', :locals => {:ssh_keys => @gitolite_deploy_keys} %>
-  </fieldset>
-
-  <br/>
-
-  <fieldset class="public_key_view">
-    <legend><%= l(:label_public_key_new) %></legend>
+  </div>
+    
+  <h3><%= l(:label_public_key_new) %></h3>
+  <div class="box tabular">
     <%= render :partial => 'gitolite_public_keys/form', :locals => {:user => @user} %>
-  </fieldset>
+  </div>
 
 <%= javascript_tag do %>
   function key_type_change(element) {
