@@ -109,7 +109,15 @@ GIT_URL_BOX
   margin-bottom: 10px;
 }
 
-/* Overide settings */
+/* Overide settings for compative with Redmine 3.4.2 default theme */
+input#rev {
+  height: 12.8px;
+  padding: 0px;
+  box-shadow: none;
+  border-radius: 0px;
+  border-color: rgb(169, 169, 169);
+}
+
 @media screen and (max-width: 899px) {
   .git_url_text {
     box-sizing: content-box;
@@ -117,12 +125,7 @@ GIT_URL_BOX
   .git_url_permissions {
     font-size: 12px;
   }
-}
-
-input#rev {
-  height: 12.8px;
-  padding: 0px;
-  box-shadow: none;
-  border-radius: 0px;
-  border-color: rgb(169, 169, 169);
+  input#rev {
+    height: 16.4px;
+  }
 }
