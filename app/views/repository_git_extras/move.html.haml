@@ -4,7 +4,7 @@
 
   = labelled_form_for :repository_mover, @move_repository_form,
                       url:  move_repository_git_extras_path(@repository),
-                      html: { method: :post, class: 'tabular', data: { confirm: l(:text_are_you_sure) } } do |f|
+                      html: { method: :post, class: 'tabular', confirm: l(:text_are_you_sure), data: { confirm: l(:text_are_you_sure) } } do |f|
 
     .flash-messages= error_messages_for 'move_repository_form'
 
