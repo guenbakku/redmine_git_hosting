@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+### 1.2.4 - 2017-09-02 (Forked by guenbakku)
+
+* Add Japanese translation
+* Fix layout error to target to Redmine v3.4.2
+* Fix bin_binary_data error
+* Make compatible to latest version of redmine_bootstrap_kit (v0.2.6 Forked by guenbakku)
+
 ### 1.2.3 - 2017-07-17
 
 * Merge [#640](https://github.com/jbox-web/redmine_git_hosting/pull/640) ([Views] Fix typo while rendering partial repositories/download_revision)
