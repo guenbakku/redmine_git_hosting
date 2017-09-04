@@ -40,7 +40,7 @@ module ReportHelper
 
   def total_by_month_for(method)
     total = [0] * 12
-    self.send(method).each { |c| total[(date_to.month - c.first.to_date.month) % 12] += c.last }
+    self.send(method).each { |c| total[(12 - c.first.to_date.month) % 12] += c.last }
     total
   end
 
