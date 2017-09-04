@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 1.2.5 - 2017-09-04 (Forked by guenbakku)
+
+* Edit Japanese translation
+* Fix bug in statistics commits per month
+
 ### 1.2.4 - 2017-09-02 (Forked by guenbakku)
 
 * Add Japanese translation
